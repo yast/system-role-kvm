@@ -1,0 +1,9 @@
+sudo: required
+language: bash
+services:
+  - docker
+
+before_install:
+  - docker build -t yast-server_kvm_role-image .
+script:
+  - docker run -it -e TRAVIS=1 -e TRAVIS_JOB_ID="$TRAVIS_JOB_ID" yast-server_kvm_role-image ./.travis.sh
