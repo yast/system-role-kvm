@@ -42,7 +42,7 @@ License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source:         %{name}-%{version}.tar.bz2
-Provides:       installer_module_extension() = desktop-applications
+Provides:       installer_module_extension() = system-role-kvm
 
 %description
 Meta package for Server KVM role definition.
