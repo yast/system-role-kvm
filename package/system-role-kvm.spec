@@ -1,5 +1,5 @@
 #
-# spec file for package skelcd-control-server-kvm-role
+# spec file for package system-role-kvm
 #
 # Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
 #
@@ -20,20 +20,20 @@
 #
 # IMPORTANT: Please do not change the control file or this spec file
 #   in build service directly, use
-#   https://github.com/yast/skelcd-control-server-kvm-role repository
+#   https://github.com/yast/system-role-kvm repository
 #
 #   See https://github.com/yast/skelcd-control-server-role/blob/master/CONTRIBUTING.md
 #   for more details.
 #
 ######################################################################
 
-Name:           skelcd-control-server-kvm-role
+Name:           system-role-kvm
 # xmllint (for validation)
 BuildRequires:  libxml2-tools
 # RNG validation schema
 BuildRequires:  yast2-installation-control >= 4.0.0
 
-Url:            https://github.com/yast/skelcd-control-server-kvm-role
+Url:            https://github.com/yast/system-role-kvm
 AutoReqProv:    off
 Version:        15.0.0
 Release:        0
@@ -42,7 +42,7 @@ License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source:         %{name}-%{version}.tar.bz2
-Provides:       installer_module_extension() = desktop-applications
+Provides:       installer_module_extension() = system-role-kvm
 
 %description
 Meta package for Server KVM role definition.
