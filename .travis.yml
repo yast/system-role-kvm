@@ -4,6 +4,6 @@ services:
   - docker
 
 before_install:
-  - docker build -t yast-server_kvm_role-image .
+  - docker build -t yast-system-role-kvm-image .
 script:
-  - docker run -it -e TRAVIS=1 -e TRAVIS_JOB_ID="$TRAVIS_JOB_ID" yast-server_kvm_role-image ./.travis.sh
+  - docker run -it -e TRAVIS=1 -e TRAVIS_JOB_ID="$TRAVIS_JOB_ID" yast-system-role-kvm-image ./.travis.sh

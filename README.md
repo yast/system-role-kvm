@@ -1,4 +1,4 @@
-skelcd-control-server-kvm-role
+system-role-kvm
 ==============================
 
 Extension package that lives in module and extend installation by roles provided by this module.
