@@ -1,8 +1,8 @@
 -------------------------------------------------------------------
 Wed Oct  4 22:35:58 UTC 2017 - sflees@suse.de
 
-- Drop Minimal from software list, it doesn't exist anymore and 
-  base pulls in its replacement via dependencies
+- Drop Minimal from software list, it doesn't exist anymore and
+  base pulls in its replacement via dependencies (bsc#1061989)
 - 15.0.1
 
 -------------------------------------------------------------------
