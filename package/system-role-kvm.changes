@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Wed Oct 18 07:36:20 UTC 2017 - aginies@suse.com
+
+- Kernel-based hypervisor and tools
+- No separate /home partition
+- Dedicated /var/lib/libvirt partition (xfs)
+- kvm server and tools patterns selected
+- libvirt-guests service enable
+- Disable kdump and firewall
+- ui in simple mode
+- ntp default setup
+
+-------------------------------------------------------------------
 Wed Oct  4 22:35:58 UTC 2017 - sflees@suse.de
 
 - Drop Minimal from software list, it doesn't exist anymore and

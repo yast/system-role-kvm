@@ -15,10 +15,11 @@ textdomain="control"
   </kvm_host_role>
   <kvm_host_role_description>
     <label>• Kernel-based hypervisor and tools
-• No separate /home partition
 • Dedicated /var/lib/libvirt partition (xfs)
-• kvm server and tools patterns selected
-• libvirt-guests service enable </label>
+• libvirt-guests service enable
+• kdump and firewall disable
+• ntp default setup
+ </label>
   </kvm_host_role_description>
 </texts>
 
@@ -31,7 +32,7 @@ textdomain="control"
           <system_role>
             <id>kvm_host_role</id>
             <additional_kernel_parameters/>
-            <ui_mode>expert</ui_mode>
+            <ui_mode>simple</ui_mode>
             <order config:type="integer">2000</order>
             <enable_autologin config:type="boolean">false</enable_autologin>
             <enable_firewall config:type="boolean">false</enable_firewall>
@@ -44,8 +45,8 @@ textdomain="control"
               <home_path>/var/lib/libvirt/</home_path>
               <home_fs>xfs</home_fs>
               <proposal_lvm config:type="boolean">false</proposal_lvm>
-              <root_space_percent>80</root_space_percent>
-              <root_base_size>10GB</root_base_size>
+              <root_space_percent>25</root_space_percent>
+              <root_base_size>15GB</root_base_size>
               <root_max_size>30GB</root_max_size>
               <proposal_lvm config:type="boolean">false</proposal_lvm>
             </partitioning>
@@ -58,7 +59,7 @@ textdomain="control"
                    instead of omitting the key entirely -->
               <optional_default_patterns><![CDATA[]]></optional_default_patterns>
             </software>
-            <additional_dialogs>kvm_setup,virt_manager_setup </additional_dialogs>
+            <!--<additional_dialogs>kvm_setup,virt_manager_setup </additional_dialogs>-->
             <enable_kdump config:type="boolean">false</enable_kdump>
             <default_ntp_setup config:type="boolean">true</default_ntp_setup>
             <services config:type="list">
