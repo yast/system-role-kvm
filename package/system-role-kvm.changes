@@ -1,23 +1,22 @@
 -------------------------------------------------------------------
-<<<<<<< HEAD
+Wed Nov  8 15:49:41 UTC 2017 - aginies@suse.com
+
+- Kernel-based hypervisor and tools
+- No separate /home partition
+- kvm server and tools patterns selected
+- libvirt-guests service enable
+- Disable kdump and firewall
+- ui in simple mode
+- ntp default setup
+- 15.0.3
+
+-------------------------------------------------------------------
 Wed Nov  8 13:07:17 UTC 2017 - ancor@suse.com
 
 - Propose a separate /var/lib/libvirt partition or logical volume
   using the new format in the <partitioning> format of the control
   file (part of fate#324207).
 - 15.0.2
-=======
-Wed Oct 18 07:36:20 UTC 2017 - aginies@suse.com
-
-- Kernel-based hypervisor and tools
-- No separate /home partition
-- Dedicated /var/lib/libvirt partition (xfs)
-- kvm server and tools patterns selected
-- libvirt-guests service enable
-- Disable kdump and firewall
-- ui in simple mode
-- ntp default setup
->>>>>>> Lot of improvement for KVM system role
 
 -------------------------------------------------------------------
 Wed Oct  4 22:35:58 UTC 2017 - sflees@suse.de
