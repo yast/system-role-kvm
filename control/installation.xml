@@ -193,7 +193,7 @@
                   </volumes>
                 </partitioning>
                 <software>
-                  <default_patterns>base kvm_server</default_patterns>
+                  <default_patterns>base kvm_server kvm_tools</default_patterns>
                   <clone_install_recommended_default config:type="boolean">true</clone_install_recommended_default>
                   <minimalistic_libzypp_config config:type="boolean">true</minimalistic_libzypp_config>
                   <display_support_status config:type="boolean">true</display_support_status>
