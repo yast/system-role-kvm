@@ -15,15 +15,21 @@ textdomain="control"
   </kvm_host_role>
   <kvm_host_role_description>
     <label>• Kernel-based hypervisor and tools
-• Dedicated /var/lib/libvirt partition (xfs)
-• libvirt-guests service enable
-• kdump and firewall disable
-• ntp default setup
- </label>
+• No separate /home partition</label>
   </kvm_host_role_description>
 </texts>
 
-<<<<<<< HEAD
+  <globals>
+    <enable_autologin config:type="boolean">false</enable_autologin>
+    <enable_firewall config:type="boolean">false</enable_firewall>
+    <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
+    <displaymanager_shutdown>root</displaymanager_shutdown>
+    <enable_sshd config:type="boolean">true</enable_sshd>
+    <dhclient_set_hostname config:type="boolean">true</dhclient_set_hostname>
+    <enable_kdump config:type="boolean">false</enable_kdump>
+    <default_ntp_setup config:type="boolean">true</default_ntp_setup>
+  </globals>
+
     <update>
       <system_roles>
         <insert_system_roles config:type="list">
@@ -188,6 +194,9 @@ textdomain="control"
                 </partitioning>
                 <software>
                   <default_patterns>base kvm_server</default_patterns>
+                  <clone_install_recommended_default config:type="boolean">true</clone_install_recommended_default>
+                  <minimalistic_libzypp_config config:type="boolean">true</minimalistic_libzypp_config>
+                  <display_support_status config:type="boolean">true</display_support_status>
                   <!-- the cdata trick produces an empty string in the data
                   instead of omitting the key entirely -->
                   <optional_default_patterns><![CDATA[]]></optional_default_patterns>
@@ -198,65 +207,4 @@ textdomain="control"
         </insert_system_roles>
       </system_roles>
     </update>
-=======
-<update>
-  <system_roles>
-    <insert_system_roles config:type="list">
-      <insert_system_role>
-        <!-- FATE#317481 -->
-        <system_roles config:type="list">
-          <system_role>
-            <id>kvm_host_role</id>
-            <additional_kernel_parameters/>
-            <ui_mode>simple</ui_mode>
-            <order config:type="integer">2000</order>
-            <enable_autologin config:type="boolean">false</enable_autologin>
-            <enable_firewall config:type="boolean">false</enable_firewall>
-            <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
-            <displaymanager_shutdown>root</displaymanager_shutdown>
-            <!-- the rest is overlaid over the feature sections and values. -->
-            <partitioning>
-              <proposal_settings_editable config:type="boolean">true</proposal_settings_editable>
-              <try_separate_home config:type="boolean">false</try_separate_home>
-              <home_path>/var/lib/libvirt/</home_path>
-              <home_fs>xfs</home_fs>
-              <proposal_lvm config:type="boolean">false</proposal_lvm>
-              <root_space_percent>25</root_space_percent>
-              <root_base_size>15GB</root_base_size>
-              <root_max_size>30GB</root_max_size>
-              <proposal_lvm config:type="boolean">false</proposal_lvm>
-            </partitioning>
-            <software>
-              <clone_install_recommended_default config:type="boolean">true</clone_install_recommended_default>
-              <minimalistic_libzypp_config config:type="boolean">true</minimalistic_libzypp_config>
-              <display_support_status config:type="boolean">true</display_support_status>
-              <default_patterns>base kvm_server kvm_tools</default_patterns>
-              <!-- the cdata trick produces an empty string in the data
-                   instead of omitting the key entirely -->
-              <optional_default_patterns><![CDATA[]]></optional_default_patterns>
-            </software>
-            <!--<additional_dialogs>kvm_setup,virt_manager_setup </additional_dialogs>-->
-            <enable_kdump config:type="boolean">false</enable_kdump>
-            <default_ntp_setup config:type="boolean">true</default_ntp_setup>
-            <services config:type="list">
-              <service>
-                <name>libvirtd</name>
-              </service>
-              <service>
-                <name>libvirt-guests</name>
-              </service>
-              <service>
-                <name>virtlockd</name>
-              </service>
-              <service>
-                <name>virtlogd</name>
-              </service>
-            </services>
-          </system_role>
-        </system_roles>
-      </insert_system_role>
-    </insert_system_roles>
-  </system_roles>
-</update>
->>>>>>> - Kernel-based hypervisor and tools
 </productDefines>
