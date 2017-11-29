@@ -2,7 +2,6 @@
 Wed Nov  8 15:49:41 UTC 2017 - aginies@suse.com
 
 - Kernel-based hypervisor and tools
-- No separate /home partition
 - kvm server and tools patterns selected
 - Disable kdump and firewall
 - ntp default setup
