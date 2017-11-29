@@ -15,8 +15,8 @@
   </kvm_host_role>
   <kvm_host_role_description>
     <label>• Kernel-based hypervisor and tools
-• separate /var/lib/libvirt
-• firewall and kdump disable</label>
+• Dedicated /var/lib/libvirt partition
+• Disable firewall, kdump services</label>
   </kvm_host_role_description>
 </texts>
 
