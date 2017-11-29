@@ -4,9 +4,7 @@ Wed Nov  8 15:49:41 UTC 2017 - aginies@suse.com
 - Kernel-based hypervisor and tools
 - No separate /home partition
 - kvm server and tools patterns selected
-- libvirt-guests service enable
 - Disable kdump and firewall
-- ui in simple mode
 - ntp default setup
 - 15.0.3
 - FATE#324207: Improve Virtualization System role (XEN/KVM)
