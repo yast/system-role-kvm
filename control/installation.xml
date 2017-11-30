@@ -1,23 +1,35 @@
 <?xml version="1.0"?>
 <productDefines xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
 
-<!--
-Work around for the text domain
-textdomain="control"
--->
+  <!--
+      Work around for the text domain
+      textdomain="control"
+  -->
 
-    <textdomain>control</textdomain>
+<textdomain>control</textdomain>
 
-    <texts>
-      <kvm_host_role>
-        <!-- TRANSLATORS: a label for a system role -->
-        <label>KVM Virtualization Host</label>
-      </kvm_host_role>
-      <kvm_host_role_description>
-        <label>• Kernel-based hypervisor and tools
-• No separate /home partition</label>
-      </kvm_host_role_description>
-    </texts>
+<texts>
+  <kvm_host_role>
+    <!-- TRANSLATORS: a label for a system role -->
+    <label>KVM Virtualization Host</label>
+  </kvm_host_role>
+  <kvm_host_role_description>
+    <label>• Kernel-based hypervisor and tools
+• Dedicated /var/lib/libvirt partition
+• Disable firewall, kdump services</label>
+  </kvm_host_role_description>
+</texts>
+
+  <globals>
+    <enable_autologin config:type="boolean">false</enable_autologin>
+    <enable_firewall config:type="boolean">false</enable_firewall>
+    <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
+    <displaymanager_shutdown>root</displaymanager_shutdown>
+    <enable_sshd config:type="boolean">true</enable_sshd>
+    <dhclient_set_hostname config:type="boolean">true</dhclient_set_hostname>
+    <enable_kdump config:type="boolean">false</enable_kdump>
+    <default_ntp_setup config:type="boolean">true</default_ntp_setup>
+  </globals>
 
     <update>
       <system_roles>
@@ -182,7 +194,10 @@ textdomain="control"
                   </volumes>
                 </partitioning>
                 <software>
-                  <default_patterns>base kvm_server</default_patterns>
+                  <default_patterns>base kvm_server kvm_tools</default_patterns>
+                  <clone_install_recommended_default config:type="boolean">true</clone_install_recommended_default>
+                  <minimalistic_libzypp_config config:type="boolean">true</minimalistic_libzypp_config>
+                  <display_support_status config:type="boolean">true</display_support_status>
                   <!-- the cdata trick produces an empty string in the data
                   instead of omitting the key entirely -->
                   <optional_default_patterns><![CDATA[]]></optional_default_patterns>

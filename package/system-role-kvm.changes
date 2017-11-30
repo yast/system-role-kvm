@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Wed Nov  8 15:49:41 UTC 2017 - aginies@suse.com
+
+- Kernel-based hypervisor and tools
+- kvm server and tools patterns selected
+- Disable kdump and firewall
+- ntp default setup
+- 15.0.3
+- FATE#324207: Improve Virtualization System role (XEN/KVM)
+
+-------------------------------------------------------------------
 Wed Nov  8 13:07:17 UTC 2017 - ancor@suse.com
 
 - Propose a separate /var/lib/libvirt partition or logical volume
