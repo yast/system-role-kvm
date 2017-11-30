@@ -20,17 +20,6 @@
   </kvm_host_role_description>
 </texts>
 
-  <globals>
-    <enable_autologin config:type="boolean">false</enable_autologin>
-    <enable_firewall config:type="boolean">false</enable_firewall>
-    <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
-    <displaymanager_shutdown>root</displaymanager_shutdown>
-    <enable_sshd config:type="boolean">true</enable_sshd>
-    <dhclient_set_hostname config:type="boolean">true</dhclient_set_hostname>
-    <enable_kdump config:type="boolean">false</enable_kdump>
-    <default_ntp_setup config:type="boolean">true</default_ntp_setup>
-  </globals>
-
     <update>
       <system_roles>
         <insert_system_roles config:type="list">
@@ -41,6 +30,16 @@
                 <id>kvm_host_role</id>
                 <order config:type="integer">2000</order>
                 <!-- the rest is overlaid over the feature sections and values. -->
+		<globals>
+		  <enable_autologin config:type="boolean">false</enable_autologin>
+		  <enable_firewall config:type="boolean">false</enable_firewall>
+		  <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
+		  <displaymanager_shutdown>root</displaymanager_shutdown>
+		  <enable_sshd config:type="boolean">true</enable_sshd>
+		  <dhclient_set_hostname config:type="boolean">true</dhclient_set_hostname>
+		  <enable_kdump config:type="boolean">false</enable_kdump>
+		  <default_ntp_setup config:type="boolean">true</default_ntp_setup>
+		</globals>
                 <partitioning>
                   <!-- The whole list of volumes and the whole section for proposal settings
                        need to be defined here because the SLES control file still uses the
