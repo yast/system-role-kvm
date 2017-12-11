@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Dec  4 09:57:43 UTC 2017 - gsouza@suse.com
+
+- Filter SLES roles so that they are not shown with SLED
+  (fate#324198)
+- 15.0.5
+
+- -----------------------------------------------------------------
 Thu Nov 30 10:00:25 UTC 2017 - aginies@suse.com
 
 - don't apply change globaly but only for the KVM system role
