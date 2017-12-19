@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Dec 19 08:54:31 UTC 2017 - gsouza@suse.com
+
+- Added SLES4SAP extension_for_product entry (bsc#1072592)
+- 15.0.6
+
+-------------------------------------------------------------------
 Mon Dec  4 09:57:43 UTC 2017 - gsouza@suse.com
 
 - Filter SLES roles so that they are not shown with SLED

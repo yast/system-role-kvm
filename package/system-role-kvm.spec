@@ -35,7 +35,7 @@ BuildRequires:  yast2-installation-control >= 4.0.0
 
 Url:            https://github.com/yast/system-role-kvm
 AutoReqProv:    off
-Version:        15.0.5
+Version:        15.0.6
 Release:        0
 Summary:        Server KVM role definition
 License:        MIT
@@ -44,6 +44,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source:         %{name}-%{version}.tar.bz2
 Provides:       installer_module_extension() = system-role-kvm
 Provides:       extension_for_product() = SLES
+Provides:       extension_for_product() = SLES_SAP
 
 %description
 Meta package for Server KVM role definition.
