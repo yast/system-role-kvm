@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Jan 10 16:20:11 UTC 2018 - rbrown@suse.com
+ 
+- adjust subvolume list to have NoCOW /var instead of many
+subvolumes (boo#1075369)
+- 15.0.7
+
+-------------------------------------------------------------------
 Tue Dec 19 08:54:31 UTC 2017 - gsouza@suse.com
 
 - Added SLES4SAP extension_for_product entry (bsc#1072592)
