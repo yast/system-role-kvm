@@ -91,48 +91,10 @@
                         <subvolume>
                           <path>usr/local</path>
                         </subvolume>
+                        <!-- unified var subvolume - https://lists.opensuse.org/opensuse-packaging/2017-11/msg00017.html -->
                         <subvolume>
-                          <path>var/cache</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/crash</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/libvirt/images</path>
+                          <path>var</path>
                           <copy_on_write config:type="boolean">false</copy_on_write>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/machines</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/mailman</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/mariadb</path>
-                          <copy_on_write config:type="boolean">false</copy_on_write>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/mysql</path>
-                          <copy_on_write config:type="boolean">false</copy_on_write>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/named</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/lib/pgsql</path>
-                          <copy_on_write config:type="boolean">false</copy_on_write>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/log</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/opt</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/spool</path>
-                        </subvolume>
-                        <subvolume>
-                          <path>var/tmp</path>
                         </subvolume>
 
                         <!-- architecture specific subvolumes -->
