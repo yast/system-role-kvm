@@ -1,10 +1,4 @@
 -------------------------------------------------------------------
-Tue Sep 25 14:39:00 UTC 2018 - dgonzalez@suse.com
-
-- Delete partitioning information from description (fate#324713)
-- 15.0.8
-
--------------------------------------------------------------------
 Wed Jan 10 16:20:11 UTC 2018 - rbrown@suse.com
  
 - adjust subvolume list to have NoCOW /var instead of many
