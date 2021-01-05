@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jan  5 17:00:08 CET 2021 - aginies <aginies@suse.com>
+- enable kdump/firewalld (jsc#SLE-17265)
+- add requires on enhanced_base (bsc#1179177)
+- 15.1.3
+
+-------------------------------------------------------------------
 Wed Mar 13 09:27:21 UTC 2019 - jreidinger <jreidinger@suse.com>
 
 - allow role also on SLES BCL (bsc#1128898)
