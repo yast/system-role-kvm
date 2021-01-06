@@ -16,7 +16,7 @@
   <kvm_host_role_description>
     <label>• Kernel-based hypervisor and tools
 • Dedicated /var/lib/libvirt partition
-• Disable firewall, kdump services</label>
+• Enable firewall, kdump services</label>
   </kvm_host_role_description>
 </texts>
 
@@ -32,12 +32,12 @@
                 <!-- the rest is overlaid over the feature sections and values. -->
 		<globals>
 		  <enable_autologin config:type="boolean">false</enable_autologin>
-		  <enable_firewall config:type="boolean">false</enable_firewall>
-		  <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
+		  <enable_firewall config:type="boolean">true</enable_firewall>
+		  <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
 		  <displaymanager_shutdown>root</displaymanager_shutdown>
 		  <enable_sshd config:type="boolean">true</enable_sshd>
 		  <dhclient_set_hostname config:type="boolean">true</dhclient_set_hostname>
-		  <enable_kdump config:type="boolean">false</enable_kdump>
+		  <enable_kdump config:type="boolean">true</enable_kdump>
 		  <default_ntp_setup config:type="boolean">true</default_ntp_setup>
 		</globals>
                 <partitioning>
@@ -155,7 +155,7 @@
                   </volumes>
                 </partitioning>
                 <software>
-                  <default_patterns>base kvm_server kvm_tools</default_patterns>
+                  <default_patterns>base kvm_server kvm_tools enhanced_base</default_patterns>
                   <clone_install_recommended_default config:type="boolean">true</clone_install_recommended_default>
                   <minimalistic_libzypp_config config:type="boolean">true</minimalistic_libzypp_config>
                   <display_support_status config:type="boolean">true</display_support_status>
