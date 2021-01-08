@@ -1,8 +1,8 @@
 -------------------------------------------------------------------
 Tue Jan  5 17:00:08 CET 2021 - aginies <aginies@suse.com>
-- enable kdump/firewalld (jsc#SLE-17265)
+- enable kdump/firewalld (jsc#SLE-12819)
 - add requires on enhanced_base (bsc#1179177)
-- 15.3.0
+- 15.3.1
 
 -------------------------------------------------------------------
 Wed Mar 13 09:27:21 UTC 2019 - jreidinger <jreidinger@suse.com>
