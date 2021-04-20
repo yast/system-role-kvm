@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Tue Apr 20 13:51:55 UTC 2021 - Ladislav Slezák <lslezak@suse.cz>
+
+- 15.4.0
+
+-------------------------------------------------------------------
 Tue Jan  5 17:00:08 CET 2021 - aginies <aginies@suse.com>
 - enable kdump/firewalld (jsc#SLE-12819)
 - add requires on enhanced_base (bsc#1179177)
