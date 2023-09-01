@@ -36,7 +36,7 @@ BuildRequires:  yast2-installation-control >= 4.0.0
 
 Url:            https://github.com/yast/system-role-kvm
 AutoReqProv:    off
-Version:        15.5.0
+Version:        15.6.0
 Release:        0
 Summary:        Server KVM role definition
 License:        MIT
